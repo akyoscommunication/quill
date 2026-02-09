@@ -25,7 +25,6 @@ class UXQuillType extends AbstractType
 
         $view->vars['row_attr'] = [
             'data-controller' => $controller,
-            'data-live-ignore' => 'true',
             "data-$controller-options-value" => json_encode($options['options']),
         ];
     }
