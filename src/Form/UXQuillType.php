@@ -17,7 +17,7 @@ class UXQuillType extends AbstractType
     ){
     }
 
-    public function buildView(FormView $view, FormInterface $form, array $options)
+    public function buildView(FormView $view, FormInterface $form, array $options): void
     {
         $controller = 'ux-quill';
         $preset = $options['preset'];
@@ -29,7 +29,7 @@ class UXQuillType extends AbstractType
         ];
     }
 
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'options' => [
@@ -51,12 +51,12 @@ class UXQuillType extends AbstractType
         ]);
     }
 
-    public function getParent()
+    public function getParent(): ?string
     {
         return TextareaType::class;
     }
 
-    public function getBlockPrefix()
+    public function getBlockPrefix(): string
     {
         return 'ux_quill';
     }

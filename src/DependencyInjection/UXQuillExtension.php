@@ -16,7 +16,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
 
 class UXQuillExtension extends ConfigurableExtension implements PrependExtensionInterface
 {
-    public function prepend(ContainerBuilder $container)
+    public function prepend(ContainerBuilder $container): void
     {
         // Register the Quill form theme if TwigBundle is available
         $bundles = $container->getParameter('kernel.bundles');
